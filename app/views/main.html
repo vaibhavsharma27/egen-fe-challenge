@@ -1,0 +1,11 @@
+<div class="main-continer">
+  <form>
+    <input type="text" ng-model="main.password"
+           ng-keyup="main.validate()">
+    <label ng-if="!main.isValid">{{::main.inValidMessage}}</label>
+    <password-meter password-strength="main.passwordStrength"
+    ></password-meter>
+    <input type="submit" value="Submit" ng-click="main.submit()">
+    <div>Form Submitted : - {{main.formSubmitted}}</div>
+  </form>
+</div>
